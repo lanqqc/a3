@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+// Inna funkcja: y = x^2 - 3x + 4
+const xValues = [];
+const yValues = [];
+for (let x = -10; x <= 10; x += 0.5) {
+    xValues.push(x);
+    yValues.push(Math.pow(x, 2) - 3 * x + 4); // Funkcja kwadratowa
+}
+
+const data = [{
+    x: xValues,
+    y: yValues,
+    mode: "lines"
+}];
+
+const layout = {title: "y = x^2 - 3x + 4"}; // Tytuł wykresu dla nowej funkcji
+
+Plotly.newPlot("myPlot", data, layout);
+</script>
+
+</body>
+</html>
