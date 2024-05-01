@@ -3,15 +3,16 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <body>
+<p style="font-size: 18px; font-weight: bold;">Funkcja liniowa: y = 5*x + 7</p>
 <div id="myPlot" style="width:100%;max-width:700px"></div>
 
 <script>
-// Inna funkcja: y = x^2 - 3x + 4
+// Zmiana funkcji na liniową: y = 5*x + 7
 const xValues = [];
 const yValues = [];
-for (let x = -10; x <= 10; x += 0.5) {
+for (let x = 0; x <= 10; x += 1) {
     xValues.push(x);
-    yValues.push(Math.pow(x, 2) - 3 * x + 4); // Funkcja kwadratowa
+    yValues.push(5 * x + 7); // Zmiana funkcji liniowej
 }
 
 const data = [{
@@ -20,7 +21,7 @@ const data = [{
     mode: "lines"
 }];
 
-const layout = {title: "y = x^2 - 3x + 4"}; // Tytuł wykresu dla nowej funkcji
+const layout = {title: "Wykres funkcji liniowej: y = 5*x + 7"}; // Zmiana tytułu wykresu
 
 Plotly.newPlot("myPlot", data, layout);
 </script>
